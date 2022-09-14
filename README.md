@@ -1,7 +1,7 @@
 # Python Scripts
 
 ## Introduction
-I'm self-learning Python. As should be obvious, I'm still very amateur at this level. This is where I dump scripts that I wrote to do odd jobs on my computer where I couldn't find suitable code to copy. The purpose of this repo is:
+I'm self-learning Python. As should be obvious, I'm still very amateur. This is where I dump scripts that I wrote to do odd jobs on my computer where I couldn't find suitable code to copy. The purpose of this repo is:
 
 1. Help others who have similar problems not reinvent the proverbial wheel;
 2. Solicit feedback and criticism on my code style. It would be great if some of these evolved into useful utilities; and
@@ -21,7 +21,7 @@ Retrieves currency exchange rates from the [Bank of Canada](https://www.bankofca
 
 1. The script quotes as text to avoid floating point rounding errors. I know that there are ways to force number precision in Python, but I haven't explored them yet. Ideally, this should work without casting.
 2. On weekends and stat holidays, the script returns an empty dictionary. [CRA advises](https://www.canada.ca/en/revenue-agency/services/tax/technical-information/income-tax/income-tax-folios-index/series-5-international-residency/series-5-international-residency-folio-4-foreign-currency/income-tax-folio-s5-f4-c1-income-tax-reporting-currency.html) that the "correct" rate is the one from "the closest preceding day for which such a rate is quoted." Therefore, the script should have a way of detecting weekends and stat holidays and quote the "closest preceding day."
-3. The script should have a caching function as not to belabour our good friends at the Bank of Canada with unnecessary API calls
+3. A cache would be nice to avoid belabouring our good friends at the Bank of Canada with repetitive API calls
 
 ### [monitorsize.py](monitorsize.py)
 
@@ -29,6 +29,8 @@ _Very_ trivial script I created when figuring out which monitors would fill a sp
 
 - `width_to_diagonal_height` takes the monitor resolution (x & y) and the width and derives the monitor (measured diagonally) that'll fit into that space with the the height it'll occupy
 - `diagonal_to_x_y` takes the monitor resolution (x & y), the diagonal size (as advertised) and returns the height and width of that monitor.
+
+It's a stupid script but included here for anyone who needs to double-check that they solved the Pythagorean Theorem correctly... which I hope is nobody over the age of twelve if you're reading this.
 
 ### [rename_files_from_contents.py](rename_files_from_contents.py)
 
